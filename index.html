@@ -13,14 +13,20 @@
       display: inline-block;
       font-size: 16px;
       cursor: pointer;
+      float: right; /* ボタンを右に寄せる */
+      margin-left: 20px; /* 左側に少しスペースを作る */
+    }
+    .container {
+      overflow: auto; /* floatをクリア */
     }
   </style>
 </head>
 <body>
   <h1>ファイルのダウンロード</h1>
-  <p>テストファイル</p>
-
-  <button class="download-button" onclick="downloadFile()">ダウンロード</button>
+  <div class="container">
+    <p>テストファイル</p>
+    <button class="download-button" onclick="downloadFile()">ダウンロード</button>
+  </div>
 
   <script>
     function downloadFile() {
